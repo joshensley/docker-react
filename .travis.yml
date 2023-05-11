@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run joshensley/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: # view video "102 Travis Config for Deployment"
+  app: # view video "102 Travis Config for Deployment"
+  env: # view video "102 Travis Config for Deployment"
+  bucket_name: # view video "102 Travis Config for Deployment"
+  bucket_path: # view video "102 Travis Config for Deployment"
+  on:
+    branch: master
+  access_key_id: # view video "104 Automated Deployments"
+  secret_access_key:
+    secure: # view video "104 Automated Deployments"
